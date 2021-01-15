@@ -63,13 +63,13 @@ class MyApp(QWidget):
 
     def createNonExclusiveGroup(self):
         groupbox = QGroupBox('Non-Exclusive Checkboxes')
-        groupbox.setFlat(True)
+        groupbox.setFlat(True)  # setFlat을 이용해 그룹박스를 평평해 보이도록.
 
         checkbox1 = QCheckBox('Checkbox1')
         checkbox2 = QCheckBox('Checkbox2')
         checkbox2.setChecked(True)
         tristatebox = QCheckBox('Tri-state Button')
-        tristatebox.setTristate(True)
+        tristatebox.setTristate(True)  #
 
         vbox = QVBoxLayout()
         vbox.addWidget(checkbox1)
@@ -109,6 +109,7 @@ class MyApp(QWidget):
         groupbox.setLayout(vbox)
 
         return groupbox
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
